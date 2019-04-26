@@ -390,7 +390,7 @@ extension HTTPHeader {
                     return "Alamofire/\(build)"
                 }()
 
-                return "\(executable)/\(appVersion) (\(bundle); build:\(appBuild); \(osNameVersion)) \(alamofireVersion)"
+                return "\(executable)/\(appVersion) (\(bundle); build:\(appBuild); \(osNameVersion)) \(alamofireVersion) \(UIDevice.current.identifierForVendor?.uuidString ?? "")"
             }
 
             return "Alamofire"
